@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* fonts------------ */
+$font1:"Epilogue", sans-serif;
+$font2:"Lato", sans-serif;
+
+/* alignment---------- */
+$a1:center;
+$a2:left;
+$a3:end;
+
+/* colors--------------- */
+
+$yellow: #FCAB10;
+$black1: #3A3A3A;
+$grey:#A6A6A6;
+$darkgrey:#575858;
+$green:#103605;
+$bg_grey:#EBEFE4;
+$light_green:#A5CD39;
+
+
+@mixin flexbox1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flexbox2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@mixin flexbox3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@mixin button{
+    border: none;
+    height: 50px;
+    width: 161px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    font-family: $font1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar{
+    height: 70px;
+}
+
+.navbar-toggler{
+    outline: none !important;
+    padding: 0 !important;
+    
+}
+.navbar-toggler img{
+    width: 35px !important;
+}
+
+
+.navbar-brand img{
+    height: 30px !important;
+    width: 110px !important;
+}
+
+
+
+
+.nav-link {
+    color: $black1 !important;
+    font-weight: bold !important;
+    margin-left: 6px !important;
+    font-family: "Epilogue", sans-serif !important;
+    padding: 20px 20px !important;
+    font-size: 18px !important;
+    transition: .2s !important;
+    
+
+
+}
+.nav-link  span{
+  height:20px !important;
+  width: 20px !important;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  background-color: #FCAB10 !important;
+}
+.active{
+    color: $yellow !important;
+}
+ 
+
+.nav-link:hover{
+    color: $yellow !important;
+}
+form input{
+    border: .5px solid !important;
+    border-radius: 8px !important;
+    height: 30px !important;
+    width: 300px !important;
+    opacity: .4 !important;
+    padding: 20px !important;
+}
+
+
+.nav-dots {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+/* hero------------------- */
+
+.hero{
+    margin-top: 80px !important;
+}
+
+
+.wrapper{
+    margin: 50px auto !important;
+    border-radius: 10px !important;
+    padding: 50px 0px !important;
+    /* box-shadow: 0 0 40px 2px #FCAB10; */
+}
+
+.feature-box{
+    position: relative;
+    padding: 30px !important;
+    margin-left: 30px !important;
+}
+
+.feature-box #img1{
+    position: absolute !important;
+    top: -20px !important;
+    left:-10px !important;
+}
+.feature-box #img2{
+    position: absolute;
+    top: 10px;
+    left: 1px;
+}
+
+.feature-box h1{
+    margin-top: 5%;
+    font-family: $font1;
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 10px;
+    color: #000 !important;
+}
+
+.feature-box p{
+    margin: 30px auto;
+    font-family: $font1;
+    font-weight: 400;
+    font-size: 20px;
+    color: $darkgrey;
+    margin-left: 10px;
+}
+
+.feature-box a{
+    text-decoration: none !important;
+    padding: 15px 20px !important;
+    margin-right: 30px;
+    margin-left: 10px;
+    border: 2px solid $yellow !important;
+    height: 50px;
+    width: 161px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff !important;
+    font-family: "Epilogue", sans-serif;
+    background-color: $yellow !important;
+    margin-top: 0px !important;
+    z-index: 3 !important;
+}
+
+
+
+.feature-img{
+    width: 100%;
+    padding: 40px;
+}
+
+.joruney .wave-img {
+    margin-top: -200px !important;
+    width: 100% !important;
+    padding: 0px !important;
+}
+
+.joruney .journeycard{
+    margin-top: -35% !important;
+}
+
+
+.journeycard h1{
+
+    text-align: center !important;
+    font-family: $font1 !important;
+    font-weight: 500 !important;
+    font-size: 60px !important;
+    color: $green !important;
+    
+}
+
+
+.journeycard p{
+    padding: 0px 60px !important;
+    height: auto !important;
+    text-align: center !important;
+    font-family: "Lato", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    color: $black1 !important;
+}
+.joruney .img1{
+    position: absolute;
+    top: -40px;
+    left: 75%;
+}
+
+
+.products {
+    overflow: scroll !important;
+    height: 444px;
+  }
+  .products::-webkit-scrollbar {
+    display: none;
+}
+  .products .product {
+    height: 306px;
+    margin-top: 38% !important;
+    @include flexbox3();
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+
+  .products .product .pro_img{
+    margin-top: -140px;
+    z-index: 3;
+}
+  
+.products .product .semicircle{
+    z-index: 2;
+    margin-top: -90px;
+    margin-left: 10px;
+}
+
+
+
+.products .product button{
+    @include button();
+    width: 98px;
+    height: 33px;
+    font-family: $font2;
+    font-size: 12px;
+    background-color: #103605;
+    margin-left: px;
+    
+}
+
+
+.products .product div .btn2{
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.products .product div .btn2 img{
+    margin-top: -5px !important;
+}
+
+
+.active1{
+    background-color: $bg_grey;   
+    padding: 35px;
+
+}
+
+.active1 h1{
+
+    font-family: $font1;
+    font-weight: bold;
+   
+}
+
+
+.active1 p{
+    font-family: $font1;
+    font-weight: 400;
+    margin-top: 20px;
+    color: $darkgrey;
+    
+    height: auto
+}
+.active1 button{
+    @include button();
+    margin-top: 20px;
+    background-color: $light_green;
+}
+.active1 img{
+    background-position: center;
+}
+
+.active1 .card1{
+    padding-left: 30px !important;
+    margin-top: 90px !important;
+}
+
+.green1{
+    margin-top: -10%;
+}
+.green2{
+    background-color: #208504;
+    margin-top: -5%;
+}
+
+
+.green3{
+    margin-top: -5%;
+}
+
+.green2 h1{
+    font-weight: 500;
+    font-family: $font1;
+    color: #fff;
+}
+.green2 p{
+    color: #fff !important;
+}
+.green2 .h1{
+    top:10px !important;
+    left:40px !important;
+}
+.eating p{
+    padding-top: 20px !important;
+}
+
+.eating #img1{
+   top: -5% !important;
+    left: 60%;
+}
+.eating #img2{
+   top: -2% !important;
+    left: 68%;
+}
+
+.believe .row{
+    border-radius: 15px;
+}
+.believe h1{
+    color: #fff !important;
+}
+.believe .eat span{
+    color: #fff !important;
+}
+
+
+
+.organic {
+    height: 303px !important;
+    margin-top: 100px !important;
+    position: relative;
+  }
+  
+  .organic div {
+    height: 303px !important;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  
+  .organic_div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px !important;
+  }
+  
+  .organic_div img {
+    margin-top: 50px !important;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .organic_div h6 {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .organic_div p {
+    height: 48px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 23px;
+  }
+
+  .organic{
+    overflow: scroll;
+    
+  }
+  .organic::-webkit-scrollbar {
+    display: none;
+}
+
+.tt{
+    margin-top: 10% !important;
+}
+  
+.testimony{
+    height: auto !important;
+    background-color: #F7F7F7;
+   
+  
+    
+}
+
+.testimon {
+    
+
+    right:-1%;
+    
+    display: none;
+    
+  }
+  .testimon h4 {
+    height: 33px;
+    font-family: $font1;
+    font-weight: 500;
+    font-size: 32px;
+    color: $green;
+    
+   
+   
+    
+  }
+  .testimony  .active-reviw{
+    display: block;
+    overflow: scroll;
+  }
+ 
+  .testimony  .active-reviw::-webkit-scrollbar {
+    display: none;
+} 
+.testimony .g1{
+    top: -80px;
+    left: 270px !important;
+}
+.testimony .g2{
+    top: -30px;
+    left: 400px !important;
+}
+  .test .test-row1 {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+}
+.test  .active{
+  border: 3px solid $light_green ;
+  
+}
+.test  .active span{
+    color: $light_green;
+}
+.test .test-row1 img {
+    margin-left: 30px;
+    padding: 10px 0px;
+  }
+  
+  .testimon .g1{
+    padding-top: 50px !important;
+  }
+  .testimon .g2{
+    padding-top: 50px !important;
+  }
+
+  .testimon h6 {
+    height: auto;
+    font-family: $font1;
+    font-size: 22px;
+    color: $green;
+    padding-top: 80px;
+  
+   
+  }
+
+  .testimon p {
+    height: 400px;
+    line-height: 29px;
+    
+   
+  }
+
+  .divtest{
+    margin-top: 100px !important;
+    line-height: 24px;
+    padding-right: 40px;
+    position: relative;
+}
+
+.divtest img{
+    position: absolute;
+    top: -20px;
+    left: 160px;
+}
+
+.form .row div form  input{
+    width: 220px !important;
+    
+}
+.form .row div form .row2 input{
+    width: 550px !important;
+}
+.form .row div form textarea{
+    width: 550px !important;
+    height: 100px;
+    border-radius: 15px;
+}
+.form .row div form button{
+    position: absolute;
+    @include button();
+    background-color: $green;
+    height: 50px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+
+footer {
+    height: auto;
+    background-color: #1C1C1C;
+    margin-top: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .nutrofooter {
+    padding-top: 5% !important;
+  }
+  
+  footer p {
+    font-family: "Lato", sans-serif;
+    height: 78px;
+    width: 300px;
+    margin-top: 20px;
+    line-height: 24px;
+    color: #FAF9F9;
+    opacity: 0.3;
+    font-size: 12px;
+  }
+  
+  footer h3 {
+    margin-top: 60px;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    height: 25px;
+  }
+  
+  footer ul {
+    margin-top: 20px;
+    padding-left: 10px;
+  }
+  
+  footer ul li {
+    list-style: none;
+    color: #EBEFE4;
+    line-height: 30px;
+    text-align: left;
+    background-color: #1C1C1C;
+    font-size: 12px;
+  }
+  
+  .style1 {
+    border-top: 3px solid #FCAB10;
+    opacity: 0.8;
+  }
+  
+  footer .fsaai {
+    margin-top: 20px;
+  }
+
+
+  .copyright {
+    height: auto;
+    background-color: #A5CD39;
+    margin-top: 2px;
+  }
+  
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .products .product {
+       
+        margin-top: 60% !important;
+    }
+    .form .row div form  input{
+        width: 140px !important;
+        
+    }
+    .form .row div form .row2 input{
+        width: 300px !important;
+    }
+    .form .row div form textarea{
+        width: 300px !important;
+        height: 100px;
+        border-radius: 15px;
+    } 
+    footer p {
+        font-family: "Lato", sans-serif;
+        height: 78px;
+        width: 100px;
+        margin-bottom: 40px;
+       
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .products .product {
+       
+        margin-top: 30% !important;
+    }
+    .form .row div form  input{
+        width: 180px !important;
+        
+    }
+    .form .row div form .row2 input{
+        width: 400px !important;
+    }
+    .form .row div form textarea{
+        width: 400px !important;
+        height: 100px;
+        border-radius: 15px;
+    } 
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .products .product {
+       
+        margin-top: 80% !important;
+    }
+    .form .row div form  input{
+        width: 150px !important;
+        
+    }
+    .form .row div form .row2 input{
+        width: 350px !important;
+    }
+    .form .row div form textarea{
+        width: 350px !important;
+        height: 100px;
+        border-radius: 15px;
+    } 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .products .product {
+       
+        margin-top: 80% !important;
+    }
+    .form .row div form  input{
+        width: 180px !important;
+        
+    }
+    .form .row div form .row2 input{
+        width: 400px !important;
+    }
+    .form .row div form textarea{
+        width: 400px !important;
+        height: 100px;
+        border-radius: 15px;
+    } 
+    .form .row div form  .mail{
+        margin-left: 100px !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .products .product {
+       
+        margin-top: 60% !important;
+    }
+    .form .row div form  input{
+        width: 220px !important;
+       
+        
+    }
+    .form .row div form  .mail{
+        margin-left: 130px !important;
+    }
+    .form .row div form .row2 input{
+        width: 470px !important;
+    }
+    .form .row div form textarea{
+        width: 400px !important;
+        height: 100px;
+        border-radius: 15px;
+    } 
+}
